@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Miniblog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <nav>
+      <%= link_to "Home", root_path %>
+      <%= link_to "Posts", posts_path %>
+      <%= link_to "New Posts", new_post_path %>
+      <%= link_to "By Author", by_author_path %>
+    </nav>
+  </header>
+
+
+
+
+
+<div class="yieldwrap"
+  <%= yield %>
+</div>
+
+</body>
+</html>

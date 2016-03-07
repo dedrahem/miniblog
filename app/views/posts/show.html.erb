@@ -1,0 +1,6 @@
+<h1><%= @post.title %>
+  <small><%= @post.author.first_name %>
+    <%= @post.author.last_name %></small></h1>
+
+<%= link_to "Edit", edit_post_path(id: @post.id), class: "btn btn-default"%>
+<%= link_to "Delete", post_path(id: @post.id), method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure you want to delete?"}%>
