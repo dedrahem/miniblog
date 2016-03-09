@@ -19,7 +19,7 @@ def create
   #set the values
   @post.title = params[:post][:title]
   @post.author_id = params[:post][:author_id]
-  # oh geez save it!
+  # SAVE  !
   if @post.save
     # redirect to "/posts"
     redirect_to posts_path

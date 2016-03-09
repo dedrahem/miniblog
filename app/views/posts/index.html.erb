@@ -9,9 +9,6 @@
       <th>
         Author
       </th>
-      <th>
-        Details
-      </th>
     </tr>
   </thead>
   <tbody>
@@ -24,7 +21,7 @@
           <%= post.author.first_name %> <%= post.author.last_name %>
         </td>
         <td>
-          <%= link_to "View Details", post_path(id: post.id) %>
+          <%= link_to "Edit or Delete", post_path(id: post.id) %>
         </td>
       </tr>
     <% end %>
