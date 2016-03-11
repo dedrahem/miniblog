@@ -1,3 +1,34 @@
-<h1>ByAuthor#listof_authors</h1>
-<p>Find me in app/views/by_author/listof_authors.html.erb</p>
-<p>  in views...the by_author folder ..filename is ..listof_authors.html.erb</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        AUTHOR
+      </th>
+      <th>
+      </th>
+      <th>
+        TITLE
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @by_author.each do |author| %>
+      <tr>
+        <td>
+          <%= author.first_name %> <%= author.last_name %>
+        </td>
+        <td>
+          <%= author.post.title %>
+        </td>
+        <td>
+          <%= link_to " GoTo View-Edit-Delete", post_path(id: post.id) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

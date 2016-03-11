@@ -19,6 +19,7 @@ def create
   #set the values
   @post.title = params[:post][:title]
   @post.author_id = params[:post][:author_id]
+  @post.body = params[:post][:body]
   # SAVE  !
   if @post.save
     # redirect to "/posts"
@@ -37,11 +38,12 @@ def update
   @post = Post.find_by id: params[:id]
   # set values
   @post.title = params[:post][:title]
+  @post.body = params[:post][:body]
   @post.author_id = params[:post][:author_id]
   # save it
   if @post.save
     # redirect to "/posts"
-    redirect_to post_path(id: @book.id)
+    redirect_to post_path(id: @post.id)
   else
     render :edit
   end

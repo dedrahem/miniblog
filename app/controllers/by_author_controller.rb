@@ -1,10 +1,7 @@
 class ByAuthorController < ApplicationController
-  # def listof_authors
-  # end
-  # def author_bio
-  # end
   def index
       @authors = Author.all
+      @posts = Post.all
     end
 
     def show
@@ -24,6 +21,7 @@ class ByAuthorController < ApplicationController
       # save
       if @author.save
         redirect_to "/authors"
+        redirect_to authors_path
       else
         render :new
       end

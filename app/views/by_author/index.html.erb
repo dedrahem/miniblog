@@ -1,0 +1,38 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        AUTHOR
+      </th>
+      <th>
+      </th>
+      <th>
+        TITLE
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @authors.each do |author| %>
+      <tr>
+        <td>
+          <h1><%= author.first_name %> <%= author.last_name %></h1>
+
+
+        </td>
+
+        <td>
+          <% author.posts.each do |post| %>
+
+            <%= post.title %><br/>
+            <%= link_to " GoTo View-Edit-Delete", edit_post_path(id: post.id) %>
+            <hr/>
+          <% end %>
+        </td>
+
+      </tr>
+
+
+    <% end %>
+  </tbody>
+</table>
