@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get "posts/new" => 'posts#new',as: :new_post
   get "posts" => 'posts#index',as: :posts
+  get "authors/new" => "by_author#new",as: :new_author
   get "authors" => 'by_author#index',as: :authors
+  post 'authors' => 'by_author#create'
   post "posts" => 'posts#create'
   get "posts" => 'posts#index'
   get "posts/:id" => 'posts#show',as: :post

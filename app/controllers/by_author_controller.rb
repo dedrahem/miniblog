@@ -21,7 +21,6 @@ class ByAuthorController < ApplicationController
       # save
       if @author.save
         redirect_to "/authors"
-        redirect_to authors_path
       else
         render :new
       end
