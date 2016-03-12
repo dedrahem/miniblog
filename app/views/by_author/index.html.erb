@@ -16,23 +16,18 @@
     <% @authors.each do |author| %>
       <tr>
         <td>
+          <%= link_to author_path(id: author.id) do %>
           <h1><%= author.first_name %> <%= author.last_name %></h1>
-
-
+        <%end%>
         </td>
-
         <td>
           <% author.posts.each do |post| %>
-
             <%= post.title %><br/>
-            <%= link_to " GoTo View-Edit-Delete", edit_post_path(id: post.id) %>
+            <%= link_to "UPDATE THIS POST", edit_post_path(id: post.id) %>
             <hr/>
           <% end %>
         </td>
-
       </tr>
-
-
     <% end %>
   </tbody>
 </table>

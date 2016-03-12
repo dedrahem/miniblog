@@ -26,4 +26,10 @@ class ByAuthorController < ApplicationController
       end
       # redirect or render form
     end
+
+    def delete
+      @author = Author.find_by id: params[:id]
+      @author.destroy
+      redirect_to authors_path
+    end
   end

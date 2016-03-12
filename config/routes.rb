@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   delete "posts/:id" => 'posts#delete'
   patch "posts/:id" => 'posts#update'
   get "posts/:id/edit" => 'posts#edit',as: :edit_post
-  delete "by_author/:id" => 'by_author#delete'
+  get "authors/:id" => 'by_author#show',as: :author
+  delete "authors/:id" => 'by_author#delete'
   patch "by_author/:id" => 'by_author#update'
 
 end
