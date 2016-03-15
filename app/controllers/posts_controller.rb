@@ -55,14 +55,3 @@ def delete
   redirect_to posts_path
   end
 end # end class
-
-
-  # def form_newpost
-  # end
-  #
-  # def display_entry
-  # end
-  #
-  # def form_editentry
-  # end
-  # end

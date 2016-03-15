@@ -1,11 +1,18 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.addauthorwrap {
+
+p {
   font-family: 'Roboto', sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     color: black;
     align-items: flex-start;
     text-decoration: none;
-    background-color: #f2c40d;
+    background-color: #ddedec;
+}
+
+.addauthorwrap {
+  font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: black;
+    align-items: flex-start;
+    text-decoration: none;
+    background-color: #ddedec;
 }
