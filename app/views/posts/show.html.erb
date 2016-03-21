@@ -1,11 +1,19 @@
-<h1><%= @post.title %>
-  <small>
-    <%= " posted by: " %>
-    <%= @post.author.first_name %>
-    <%= @post.author.last_name %>
-    </small></h1>
-    <p> <%= "" %> </p>
-    <p> <%= @post.body %> </p>
-    <p> <%= "" %> </p>
-<%= link_to "Edit", edit_post_path(id: @post.id), class: "btn btn-default"%>
-<%= link_to "Delete", post_path(id: @post.id), method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure you want to delete?"}%>
+<div class="postbanner">
+  <h1><%= @post.title %></h1>
+
+
+    <div class="showhtml">
+      <%= " posted by: " %>
+      <%= @post.author.first_name %>
+      <%= @post.author.last_name %>
+      <p> <%= "" %> </p>
+      <div class="postbody">
+      <%= @post.body %>
+      </div>
+      <p> <%= "" %> </p>
+    </div>
+
+      <%= link_to "Edit", edit_post_path(id: @post.id), class: "btn btn-default"%>
+      <p> <%= "" %> </p>
+      <%= link_to "Delete", post_path(id: @post.id), method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure you want to delete?"}%>
+</div>

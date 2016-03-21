@@ -1,10 +1,10 @@
 <div class="newpostbanner">
-  <p>New Posts Entry Form</p>
-  <p><small>(REF, Path is:> miniblog/views/posts/new.html.erb</small></p>
-</div>
+  <%= "New Posts Entry Form" %>
 
-<div class="addauthorwrap">
-  <%= link_to "add to database - New Author", new_author_path %>
-</div>
 
-<%= render partial: 'form' %>
+  <div class="addauthorwrap">
+    <%= link_to "New Author - if new author redirect here to add new author", new_author_path %>
+  </div>
+
+  <%= render partial: 'form' %>
+</div>
